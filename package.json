@@ -1,0 +1,19 @@
+{
+  "name": "metube",
+  "version": "1.0.0",
+  "description": "Youtube CloneCoding",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wnsgh605/Metube.git"
+  },
+  "author": "Tom Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wnsgh605/Metube/issues"
+  },
+  "homepage": "https://github.com/wnsgh605/Metube#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
