@@ -14,11 +14,14 @@
   },
   "homepage": "https://github.com/wnsgh605/Metube#readme",
   "dependencies": {
+    "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "@babel/node": "^7.12.10",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "autoprefixer": "^10.1.0",
+    "aws-sdk": "^2.821.0",
+    "axios": "^0.21.1",
     "babel-loader": "^8.2.2",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.2.0",
@@ -28,10 +31,12 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "get-blob-duration": "^1.1.2",
     "helmet": "^4.2.0",
     "mongoose": "^5.11.8",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
     "node-sass": "^4.14.1",
     "passport": "^0.4.1",
     "passport-facebook": "^3.0.0",
@@ -46,10 +51,14 @@
     "webpack-cli": "^4.3.0"
   },
   "scripts": {
-    "dev:server": "nodemon --exec babel-node init.js --delay 2 --ignore 'scss' ",
-    "dev:assets": "cross-env WEBPACK_ENV=development webpack -w",
-    "build:assets": "cross-env WEBPACK_ENV=production webpack",
-    "tunnel": "lt --port 4000"
+    "dev:server": "nodemon --exec babel-node src/init.js",
+    "dev:assets": "cd src && cross-env WEBPACK_ENV=development && webpack -w",
+    "build:assets": "cd src && cross-env WEBPACK_ENV=production && webpack",
+    "build:server": "babel src --out-dir build --ignore src/static --ignore src/assets --ignore src/webpack.config.js",
+    "copyAll": "xcopy src\\static build\\static /d /e /h /c /y /i && xcopy src\\views build\\views /d /e /h /c /y /i",
+    "build": "npm run build:server && npm run build:assets && npm run copyAll",
+    "prebuild": "rd /s \"build\"",
+    "prestart": "npm run build"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

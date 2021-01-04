@@ -21,5 +21,5 @@ used (html, css(scss), babel/node|core|preset-env, nodemon(npm -D), webpack(css-
 as middleware (morgan, helmet, cookie parser, body parser, multer via npm)
 as server (nodeJS, express(JS))
 as viewEngine (pug)
-as DB (mongoDB, mongoose(adapter), passportJS(passport-local-mongoose, passport-local), connect mongo)
+as DB (mongoDB, mongoose(adapter), passportJS(passport-local-mongoose, passport-local), connect mongo, AWS-s3, mongoatlas)
 as Safety (dotenv)
