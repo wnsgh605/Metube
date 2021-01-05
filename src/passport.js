@@ -17,7 +17,7 @@ passport.use(
       clientSecret: process.env.GH_SECRET,
       callbackURL: `${
         process.env.PRODUCTION
-          ? "https://aqueous-reef-66027.herokuapp.com/"
+          ? "https://aqueous-reef-66027.herokuapp.com"
           : "http://localhost:4000"
       }${routes.githubCallback}`,
     },
