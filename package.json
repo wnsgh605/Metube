@@ -2,6 +2,9 @@
   "name": "metube",
   "version": "1.0.0",
   "description": "Youtube CloneCoding",
+  "engines": {
+    "node": "12.x"
+  },
   "main": "index.js",
   "repository": {
     "type": "git",
