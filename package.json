@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Youtube CloneCoding",
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "main": "index.js",
   "repository": {
@@ -54,12 +54,15 @@
     "webpack-cli": "^4.3.0"
   },
   "scripts": {
-    "dev:server": "nodemon --exec babel-node src/init.js",
+    "dev:server": "nodemon --exec babel-node init.js",
     "dev:assets": "cd src && cross-env WEBPACK_ENV=development && webpack -w",
     "build:assets": "cd src && cross-env WEBPACK_ENV=production && webpack",
     "build:server": "babel src --out-dir build --ignore src/static --ignore src/assets --ignore src/webpack.config.js",
     "copyAll": "xcopy src\\static build\\static /d /e /h /c /y /i && xcopy src\\views build\\views /d /e /h /c /y /i",
-    "build": "npm run build:server && npm run build:assets && npm run copyAll"
+    "build": "npm run build:server && npm run build:assets && npm run copyAll",
+    "prebuild": "rd /s \"build\"",
+    "start": "node build/init.js",
+    "prestart": "npm run build"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
