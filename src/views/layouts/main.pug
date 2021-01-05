@@ -6,6 +6,8 @@ html
        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
        link(rel="stylesheet", href="/static/styles.css")
     body
+        if messages.error
+            span=messages.error
         include ../partials/header
         main
             block content
