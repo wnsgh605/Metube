@@ -23,3 +23,5 @@ as server (nodeJS, express(JS))
 as viewEngine (pug)
 as DB (mongoDB, mongoose(adapter), passportJS(passport-local-mongoose, passport-local), connect mongo, AWS-s3, mongoatlas)
 as Safety (dotenv)
+
+On Heroku
