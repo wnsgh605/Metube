@@ -25,3 +25,4 @@ as DB (mongoDB, mongoose(adapter), passportJS(passport-local-mongoose, passport-
 as Safety (dotenv)
 
 On Heroku
+https://aqueous-reef-66027.herokuapp.com/
