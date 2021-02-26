@@ -17,12 +17,11 @@ Youtube CloneCoding
 
 ### What's used
 
-used (html, css(scss), babel/node|core|preset-env, nodemon(npm -D), webpack(css-loader, postcss-loader{autoprefixer}, sass-loader) via vscode)
-as middleware (morgan, helmet, cookie parser, body parser, multer via npm)
-as server (nodeJS, express(JS))
+used (html, css(scss), babel/node|core|preset-env, webpack(css-loader, postcss-loader{autoprefixer}, sass-loader))
+as express-middleware (morgan, helmet, cookie parser, body parser, multer)
+as server (nodeJS expressJS)
 as viewEngine (pug)
 as DB (mongoDB, mongoose(adapter), passportJS(passport-local-mongoose, passport-local), connect mongo, AWS-s3, mongoatlas)
-as Safety (dotenv)
 
 On Heroku
 https://aqueous-reef-66027.herokuapp.com/
